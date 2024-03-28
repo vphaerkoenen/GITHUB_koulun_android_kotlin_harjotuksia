@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocalMQTTFragment"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+
+
+    <TextView
+
+        android:id="@+id/letsShowLocalmqttMessage"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Waiting..." />
+
+    <TextView
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose topic"
+        android:layout_marginTop="80dp"
+        android:textStyle="bold"/>
+    <RadioGroup
+
+        android:id="@+id/radiogroupChooseTopic"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/radioButtonTestTopic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="test/topic" />
+
+        <RadioButton
+            android:id="@+id/radioButtonDeviceTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="device/test" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonConnectToTopic"
+        android:text="connect"
+        android:layout_marginTop="220dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</FrameLayout>

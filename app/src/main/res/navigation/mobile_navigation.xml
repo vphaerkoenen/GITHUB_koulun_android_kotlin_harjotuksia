@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.DataFragment"
+        android:label="fragment_data"
+        tools:layout="@layout/fragment_data" >
+        <action
+            android:id="@+id/action_dataFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentDataFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.CommentDataFragment"
+        android:label="fragment_comment_data"
+        tools:layout="@layout/fragment_comment_data" />
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.TodoFragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo" >
+        <action
+            android:id="@+id/action_todoFragment_to_todoDetailFragment"
+            app:destination="@id/todoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todoDetailFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.TodoDetailFragment"
+        android:label="fragment_todo_detail"
+        tools:layout="@layout/fragment_todo_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_cityWeatherFragment"
+            app:destination="@id/cityWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityWeatherFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.CityWeatherFragment"
+        android:label="fragment_city_weather"
+        tools:layout="@layout/fragment_city_weather" >
+        <argument
+            android:name="latitude"
+            app:argType="float" />
+        <argument
+            android:name="longitude"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_cityWeatherFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/openStreetMapFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.OpenStreetMapFragment"
+        android:label="fragment_open_street_map"
+        tools:layout="@layout/fragment_open_street_map" >
+        <action
+            android:id="@+id/action_openStreetMapFragment_to_OSMWeatherFragment"
+            app:destination="@id/OSMWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OSMWeatherFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.OSMWeatherFragment"
+        android:label="fragment_o_s_m_weather"
+        tools:layout="@layout/fragment_o_s_m_weather" >
+        <action
+            android:id="@+id/action_OSMWeatherFragment_to_openStreetMapFragment"
+            app:destination="@id/openStreetMapFragment" />
+        <argument
+            android:name="latitude"
+            app:argType="float" />
+        <argument
+            android:name="longitude"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedBackFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.feedback.FeedBackFragment"
+        android:label="fragment_feed_back" >
+        <action
+            android:id="@+id/action_feedBackFragment_to_editFeedBackFragment"
+            app:destination="@id/editFeedBackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicAuthFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.basicauth.BasicAuthFragment"
+        android:label="fragment_basic_auth_list"
+        tools:layout="@layout/fragment_basic_auth_list" />
+    <fragment
+        android:id="@+id/editFeedBackFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.EditFeedBackFragment"
+        android:label="fragment_edit_feed_back"
+        tools:layout="@layout/fragment_edit_feed_back" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/temporaryTokenFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.TemporaryTokenFragment"
+        android:label="fragment_temporary_token_list"
+        tools:layout="@layout/fragment_temporary_token_list" />
+    <fragment
+        android:id="@+id/weatherStationFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.WeatherStationFragment"
+        android:label="fragment_weather_station"
+        tools:layout="@layout/fragment_weather_station" />
+    <fragment
+        android:id="@+id/hiveMQFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.HiveMQFragment"
+        android:label="fragment_hive_m_q"
+        tools:layout="@layout/fragment_hive_m_q" />
+    <fragment
+        android:id="@+id/localMQTTFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.LocalMQTTFragment"
+        android:label="fragment_local_m_q_t_t"
+        tools:layout="@layout/fragment_local_m_q_t_t" />
+    <fragment
+        android:id="@+id/customViewTesterFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.CustomViewTesterFragment"
+        android:label="fragment_custom_view_tester"
+        tools:layout="@layout/fragment_custom_view_tester" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/chartFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.ChartFragment"
+        android:label="fragment_chart"
+        tools:layout="@layout/fragment_chart" />
+    <fragment
+        android:id="@+id/swipeTestFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.SwipeTestFragment"
+        android:label="fragment_swipe_test"
+        tools:layout="@layout/fragment_swipe_test" />
+    <fragment
+        android:id="@+id/objectDetectionFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi2023.ObjectDetectionFragment"
+        android:label="fragment_object_detection"
+        tools:layout="@layout/fragment_object_detection" />
+</navigation>

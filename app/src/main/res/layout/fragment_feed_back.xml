@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.edistynytmobiiliohjelmointi2023.feedback.FeedBackFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/button_get_feedback"
+        android:layout_width="163dp"
+        android:layout_height="177dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Get Feedback \n from API" />
+
+    <Button
+        android:id="@+id/button_post_feedback"
+        android:layout_width="163dp"
+        android:layout_height="177dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="-175dp"
+        android:layout_marginLeft="10dp"
+        android:text="post Feedback \n to API" />
+
+
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post these to API"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
+
+
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/post_api_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="90dp"/>
+
+
+
+
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location:"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/post_api_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="90dp"/>
+
+
+
+
+
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Value:"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/post_api_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="90dp"/>
+
+
+
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetched from API:"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFeeBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

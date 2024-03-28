@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CustomViewTesterFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.github.anastr.speedviewlib.SpeedView
+
+        android:id="@+id/speedView"
+        android:layout_width="178dp"
+        android:layout_height="152dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:sv_indicatorColor="@color/purple_500"
+        app:sv_maxSpeed="50"
+        app:sv_minSpeed="-50"
+        app:sv_unit="°C"
+        app:sv_withTremble="false" />
+
+    <com.example.edistynytmobiiliohjelmointi2023.CustomTemperatureView
+        android:id="@+id/customtemperatureView"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/buttonSetNewTemp"
+        android:text="set new temp randomly"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.example.edistynytmobiiliohjelmointi2023.LatestDataView
+        android:id="@+id/textviewLatestDataInBox"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/customborder"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/buttonAddDataToTextview"
+        android:layout_gravity="center"
+        android:text="add data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
